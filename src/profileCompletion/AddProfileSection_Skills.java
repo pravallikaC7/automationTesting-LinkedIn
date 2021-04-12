@@ -52,6 +52,9 @@ public class AddProfileSection_Skills {
 		}
 	}
 	
+	/*
+	 * Firstly, to add a skill in Me >> Profile
+	 */
 	@Test (priority=1)
 	public void addSkill() {
 		//wait until the Home page is loaded completely
@@ -83,6 +86,9 @@ public class AddProfileSection_Skills {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 		}
+	    /*
+	     * Enter skill in Skill text box and click on submit button in Add Skill popup
+	     */
 		enterSkill.click();
 		enterSkill.sendKeys(" Dev");    
 		enterSkill.sendKeys(Keys.TAB);
@@ -90,6 +96,9 @@ public class AddProfileSection_Skills {
 		driver.findElement(By.xpath("//div[@class='artdeco-modal__actionbar ember-view']/button[1]")).click();
 	}	
 	
+	/* 
+	 * To verify whether the added skill is being displayed under Skills section of My profile
+	 */
 	@Test (priority=1)
 	public void verifySkill() {
 		((JavascriptExecutor)driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
@@ -99,7 +108,10 @@ public class AddProfileSection_Skills {
 	    AssertJUnit.assertEquals(expectedTitle, actualTitle);
 	    System.out.println("Verified if the added skill is being displayed or not");
 	}
-
+	
+	/*
+	 * To take a screenshot of Skills section of Me >> Profile
+	 */
 	@AfterTest
 	public void addedSkill()
 	{
