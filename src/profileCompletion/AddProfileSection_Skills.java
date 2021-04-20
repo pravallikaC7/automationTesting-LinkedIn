@@ -1,3 +1,8 @@
+/*
+ * Test script for testing Website LinkedIn
+ * The test scripts is developed using Selenium Framework
+ *
+ */
 package profileCompletion;
 
 import org.testng.annotations.*;
